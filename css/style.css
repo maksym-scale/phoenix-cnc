@@ -68,10 +68,10 @@ h1,h2,h3{font-family:'Montserrat',sans-serif;line-height:1.15;font-weight:700}
 .header__inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
 .header__logo img{height:44px;width:auto}
 .nav{display:none;gap:26px}
-.nav__link{color:var(--muted);font-size:15px;font-weight:500;transition:var(--tr)}
+.nav__link{color:var(--muted);font-size:15px;font-weight:500;transition:var(--tr);white-space:nowrap}
 .nav__link:hover{color:var(--primary)}
 .header__actions{display:none;align-items:center;gap:16px}
-.header__phone{font-weight:600;font-size:16px;transition:var(--tr)}
+.header__phone{font-weight:600;font-size:16px;transition:var(--tr);white-space:nowrap}
 .header__phone:hover{color:var(--primary)}
 
 /* Кнопка «Подзвонити» (тільки моб.) */
@@ -215,8 +215,34 @@ h1,h2,h3{font-family:'Montserrat',sans-serif;line-height:1.15;font-weight:700}
 }
 .gallery__item img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius)}
 
+/* ---------- Опт і серійні замовлення ---------- */
+.wholesale{display:grid;gap:26px}
+.wholesale .section__title{text-align:left;margin-bottom:16px}
+.wholesale__text p{color:var(--muted);margin-bottom:12px}
+.wholesale__text .wholesale__lead{color:var(--text);font-size:18px;font-weight:500}
+.wholesale__card{
+  background:var(--bg);border:1px solid rgba(242,101,34,.4);border-radius:var(--radius-lg);
+  padding:22px;box-shadow:var(--shadow);
+}
+.wholesale__card h3{font-size:18px;margin-bottom:14px}
+.wholesale__list{list-style:none;display:grid;gap:10px;margin-bottom:18px}
+.wholesale__list li{position:relative;padding-left:28px;color:#e7e2de;font-size:15px}
+.wholesale__list li::before{content:"✓";position:absolute;left:0;color:var(--primary);font-weight:700}
+.wholesale__cta-text{color:var(--muted);font-size:14.5px;margin-bottom:16px}
+.wholesale__actions,.price-callout__actions{display:flex;flex-direction:column;gap:10px}
+.wholesale__actions .btn,.price-callout__actions .btn{white-space:normal;text-align:center;line-height:1.3}
+
 /* ---------- Ціни ---------- */
-.prices__inner{display:grid;gap:34px}
+.price-callout{
+  display:grid;gap:18px;margin-bottom:30px;padding:20px;
+  border:1px solid rgba(242,101,34,.5);border-left:4px solid var(--primary);
+  border-radius:var(--radius-lg);
+  background:linear-gradient(135deg,rgba(242,101,34,.14),rgba(226,62,28,.04));
+}
+.price-callout__text strong{display:block;font-family:'Montserrat',sans-serif;font-size:18px;line-height:1.3;margin-bottom:6px}
+.price-callout__text span{color:var(--muted);font-size:14.5px}
+.prices__grid{display:grid;gap:34px}
+.price-block__title{font-size:20px;margin-bottom:14px}
 .table-scroll{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--line)}
 .price-table{width:100%;border-collapse:collapse;min-width:280px}
 .price-table th,.price-table td{padding:13px 18px;text-align:left;border-bottom:1px solid var(--line)}
@@ -227,8 +253,6 @@ h1,h2,h3{font-family:'Montserrat',sans-serif;line-height:1.15;font-weight:700}
 .price-notes{list-style:none;margin-top:18px;display:grid;gap:8px}
 .price-notes li{position:relative;padding-left:20px;color:var(--muted);font-size:14px}
 .price-notes li::before{content:"•";position:absolute;left:4px;color:var(--primary)}
-.prices .section__title,.prices .section__sub{text-align:left;margin-left:0}
-.prices__table-wrap .section__sub{margin-left:0}
 
 /* ---------- Основна форма (lead) ---------- */
 .lead{padding:56px 0;background:linear-gradient(180deg,var(--bg),var(--surface))}
@@ -305,6 +329,10 @@ a.contacts__link:hover{color:var(--primary)}
   .contacts{grid-template-columns:repeat(3,1fr)}
   .footer__inner{grid-template-columns:1.4fr 1fr 1fr}
   .section__title{font-size:32px}
+  .wholesale__card{padding:28px}
+  .wholesale__list{grid-template-columns:1fr 1fr}
+  .price-callout{padding:24px 28px}
+  .price-callout__actions{flex-direction:row;flex-wrap:wrap}
 }
 
 /* Десктоп */
@@ -319,10 +347,23 @@ a.contacts__link:hover{color:var(--primary)}
   .hero__title{font-size:52px}
   .cards--3{grid-template-columns:repeat(3,1fr)}
   .steps{grid-template-columns:repeat(4,1fr)}
-  .prices__inner{grid-template-columns:1.2fr .8fr;align-items:start;gap:44px}
+  .wholesale{grid-template-columns:1fr 1fr;align-items:center;gap:50px}
+  .price-callout{grid-template-columns:1fr auto;align-items:center;gap:28px}
+  .price-callout__actions{flex-wrap:nowrap}
+  .prices__grid{grid-template-columns:1fr 1fr;align-items:start;gap:40px}
   .lead__inner{grid-template-columns:1fr 1fr;align-items:center}
   .section{padding:80px 0}
   .lead{padding:80px 0}
+}
+
+/* Вузький десктоп: ущільнюємо меню, щоб усе вмістилось в один рядок */
+@media(min-width:1024px) and (max-width:1279px){
+  .header__logo img{height:38px}
+  .nav{gap:16px}
+  .nav__link{font-size:14px}
+  .header__actions{gap:12px}
+  .header__phone{font-size:15px}
+  .header__actions .btn--sm{padding:9px 14px;font-size:14px}
 }
 
 /* Великий десктоп */
