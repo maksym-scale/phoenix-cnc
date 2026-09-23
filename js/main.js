@@ -57,6 +57,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ---------- Кнопки біля прайсу: підставляємо послугу в основну форму ---------- */
+  document.querySelectorAll('[data-service]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var select = document.querySelector('#lead select[name="service"]');
+      if (!select) return;
+      var value = btn.getAttribute('data-service');
+      for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].text === value) { select.selectedIndex = i; break; }
+      }
+    });
+  });
+
   /* ---------- Валідація ---------- */
   function validPhone(v) {
     // мінімум 9 цифр
@@ -83,8 +95,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!validPhone(phoneInput.value)) { setError(phoneInput.closest('.field'), true); ok = false; }
       else setError(phoneInput.closest('.field'), false);
 
-      if (!validEmail(emailInput.value)) { setError(emailInput.closest('.field'), true); ok = false; }
-      else setError(emailInput.closest('.field'), false);
+      // У формі може не бути поля email (напр. Hero)
+      if (emailInput) {
+        if (!validEmail(emailInput.value)) { setError(emailInput.closest('.field'), true); ok = false; }
+        else setError(emailInput.closest('.field'), false);
+      }
 
       if (!ok) { phoneInput.focus(); return; }
 
