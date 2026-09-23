@@ -76,6 +76,7 @@
       <a href="#services" class="nav__link">Послуги</a>
       <a href="#advantages" class="nav__link">Переваги</a>
       <a href="#process" class="nav__link">Як працюємо</a>
+      <a href="#wholesale" class="nav__link">Опт і серії</a>
       <a href="#prices" class="nav__link">Ціни</a>
       <a href="#contacts" class="nav__link">Контакти</a>
       <div class="nav__foot">
@@ -222,35 +223,113 @@
   </div>
 </section>
 
-<!-- ================= ЦІНИ + ФОРМА №2 ================= -->
-<section class="section" id="prices">
-  <div class="container prices__inner">
-    <div class="prices__table-wrap">
-      <h2 class="section__title">Ціни на фрезерну порізку</h2>
-      <p class="section__sub">Орієнтовна вартість порізки фанери за погонний метр — для орієнтиру. Точну ціну рахуємо індивідуально під ваш обсяг і креслення.</p>
-      <div class="table-scroll">
-        <table class="price-table">
-          <thead>
-            <tr><th>Товщина фанери</th><th>Ціна, грн / м.пог.</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>4 мм</td><td>12</td></tr>
-            <tr><td>6 мм</td><td>15</td></tr>
-            <tr><td>8 мм</td><td>18</td></tr>
-            <tr><td>9 мм</td><td>20</td></tr>
-            <tr><td>12 мм</td><td>23</td></tr>
-            <tr><td>15 мм</td><td>30</td></tr>
-            <tr><td>30 мм</td><td>40</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <ul class="price-notes">
-        <li>Чим більший обсяг — тим нижча ставка за метр. Індивідуальна ціна під кожне замовлення.</li>
-        <li>Вартість матеріалу рахується окремо або ріжемо ваш.</li>
-        <li>Гравіювання, порізка дерева й нестандартні задачі — за окремим прорахунком.</li>
+<!-- ================= ОПТОВІ ТА СЕРІЙНІ ЗАМОВЛЕННЯ ================= -->
+<section class="section section--alt" id="wholesale">
+  <div class="container wholesale">
+    <div class="wholesale__text">
+      <span class="badge">Основний напрям роботи</span>
+      <h2 class="section__title">Оптові та серійні замовлення</h2>
+      <p class="wholesale__lead">PHOENIX CNC орієнтований насамперед на серійне та оптове виробництво деталей на ЧПК.</p>
+      <p>Для великих і повторюваних партій діють індивідуальні ціни — зі збільшенням обсягу замовлення вартість обробки одиниці продукції зменшується.</p>
+      <p>Для постійних замовників формуємо окремі умови серійного виробництва.</p>
+    </div>
+    <div class="wholesale__card">
+      <h3>Під час розрахунку враховуємо</h3>
+      <ul class="wholesale__list">
+        <li>Обсяг партії</li>
+        <li>Метраж фрезерування</li>
+        <li>Товщину та тип матеріалу</li>
+        <li>Складність деталей</li>
+        <li>Повторюваність операцій</li>
+        <li>Регулярність замовлень</li>
       </ul>
+      <p class="wholesale__cta-text">Надішліть креслення або файл деталі та вкажіть необхідну кількість — ми розрахуємо ціну саме для вашої партії.</p>
+      <div class="wholesale__actions">
+        <a href="#lead" class="btn btn--primary" data-service="Серійне / оптове замовлення">Розрахувати серійне замовлення</a>
+        <a href="#lead" class="btn btn--ghost" data-service="Серійне / оптове замовлення">Надіслати креслення</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЦІНИ ================= -->
+<section class="section" id="prices">
+  <div class="container">
+    <h2 class="section__title">Ціни</h2>
+    <p class="section__sub">Базові ставки для одиничних і невеликих замовлень. Для серійних партій ціну розраховуємо індивідуально.</p>
+
+    <!-- Акцент: серійне виробництво -->
+    <div class="price-callout">
+      <div class="price-callout__text">
+        <strong>Серійне виробництво — індивідуальна ціна залежно від обсягу партії.</strong>
+        <span>Надішліть креслення та кількість — розрахуємо вартість саме для вашої партії.</span>
+      </div>
+      <div class="price-callout__actions">
+        <a href="#lead" class="btn btn--primary" data-service="Серійне / оптове замовлення">Розрахувати серійне замовлення</a>
+        <a href="#lead" class="btn btn--ghost" data-service="Серійне / оптове замовлення">Надіслати креслення</a>
+      </div>
     </div>
 
+    <div class="prices__grid">
+      <!-- Прайс: розкрій фанери -->
+      <div class="price-block">
+        <h3 class="price-block__title">Розкрій фанери на ЧПК</h3>
+        <div class="table-scroll">
+          <table class="price-table">
+            <thead>
+              <tr><th>Товщина</th><th>Ціна, грн/пог. м</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>4 мм</td><td>12</td></tr>
+              <tr><td>6 мм</td><td>15</td></tr>
+              <tr><td>8 мм</td><td>18</td></tr>
+              <tr><td>9 мм</td><td>20</td></tr>
+              <tr><td>10 мм</td><td>21</td></tr>
+              <tr><td>12 мм</td><td>23</td></tr>
+              <tr><td>15 мм</td><td>30</td></tr>
+              <tr><td>18 мм</td><td>35</td></tr>
+              <tr><td>21 мм</td><td>40</td></tr>
+              <tr><td>24 мм</td><td>45</td></tr>
+              <tr><td>27 мм</td><td>50</td></tr>
+              <tr><td>30 мм</td><td>55</td></tr>
+              <tr><td>понад 30 мм</td><td>індивідуально</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="price-notes">
+          <li>Мінімальний обсяг замовлення — 1 лист матеріалу.</li>
+          <li>Мінімальна вартість обробки — 500 грн.</li>
+          <li>Вартість розраховується за фактичною довжиною різу.</li>
+          <li>Працюємо з матеріалом замовника або нашим. Матеріал PHOENIX CNC оплачується окремо.</li>
+        </ul>
+      </div>
+
+      <!-- Прайс: 3D-фрезерування -->
+      <div class="price-block">
+        <h3 class="price-block__title">3D-фрезерування</h3>
+        <div class="table-scroll">
+          <table class="price-table">
+            <thead>
+              <tr><th>Макс. глибина рельєфу</th><th>Ціна, грн/дм²</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>до 5 мм</td><td>від 120</td></tr>
+              <tr><td>5–10 мм</td><td>від 135</td></tr>
+              <tr><td>10–20 мм</td><td>від 150</td></tr>
+              <tr><td>20–30 мм</td><td>від 170</td></tr>
+              <tr><td>понад 30 мм</td><td>індивідуально</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="price-notes">
+          <li>У вартість входить чорнове та чистове фрезерування на ЧПК. Ручне фінішне шліфування не входить у базову вартість та розраховується окремо.</li>
+          <li>Матеріал може бути наданий замовником або PHOENIX CNC і оплачується окремо.</li>
+          <li>Створення, доопрацювання або адаптація 3D-моделі розраховуються окремо.</li>
+          <li>Для моделей із високою деталізацією, складною геометрією або значним часом чистової обробки остаточна ціна визначається після перевірки 3D-моделі.</li>
+          <li>Для серійних 3D-виробів — індивідуальні умови.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -276,7 +355,9 @@
           <div class="field">
             <select name="service">
               <option value="">Послуга, яка цікавить</option>
+              <option>Серійне / оптове замовлення</option>
               <option>Фрезерна порізка</option>
+              <option>3D-фрезерування</option>
               <option>Гравіювання</option>
               <option>Інше / не визначився</option>
             </select>
@@ -327,6 +408,7 @@
     </div>
     <nav class="footer__nav">
       <a href="#services">Послуги</a>
+      <a href="#wholesale">Опт і серії</a>
       <a href="#prices">Ціни</a>
       <a href="#process">Як працюємо</a>
       <a href="#contacts">Контакти</a>
